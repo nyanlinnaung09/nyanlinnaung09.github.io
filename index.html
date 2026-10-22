@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #0b172d;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        header h6 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: right;
+        }
+        nav {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nyan {
+            width: 50px;
+            height: 50px;
+        }
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+        .nav_animation:hover{
+            color: #28f48a;
+            text-decoration: underline;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+        }
+        main {
+            width: 80%;
+            margin: 0 auto;
+        }
+         h1 {
+            font-size: 110px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 150px;
+            color: #38BDF8;
+        }
+        h4 {
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        h5 {
+            font-size: 20px;
+            color: #ffffff;
+        }
+        h6 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #97A2B6;
+        }
+       
+        section{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .CV {
+            background-color: #38BDF8;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 15px;
+            font-size: 15px;
+            font-weight:bold ;
+        }
+        .CV:hover {
+            background-color: #0b172d;
+            color: #38BDF8;
+            border: 1px solid #38BDF8;
+        }
+        .CM {
+            background-color: #0b172d;
+            color: #38BDF8;
+            border: 1px solid #38BDF8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 15px;
+            font-size: 15px;
+            font-weight:bold 
+        }
+        .CM:hover {background-color: #38BDF8;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 15px;
+            font-size: 15px;
+            font-weight:bold ;}
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .box{
+            width: 500px;
+            height: 250px;
+            background-color: #1e293b;
+            border-radius: 15px;
+            margin-right: 20px;
+            margin-top: 40px;
+            gap: 30px;
+        }
+        .timeline {
+            border-left: 2px solid #273043;
+            padding-left: 30px;
+            max-width: 700px;
+            margin-left: 10px;
+        }
+        .year{
+            width: 75px;
+            height: 30px;
+            background-color: #38BDF8;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .journey{
+            display: flex;
+        }
+        .contact_box{
+            width: 500px;
+            height: 100px;
+            border-radius: 5px;
+            background-color: #0b172d;
+            border: 1px solid #38BDF8;
+            display: flex;
+            align-items: center;
+        }
+        .sm_box{ 
+            display: flex;
+            align-items: center;
+        }
+        .button_project{
+            background-color: #0b172d;
+            color: #38BDF8;
+            border: 1px solid #38BDF8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 15px;
+            font-size: 15px;
+            font-weight:bold 
+        }
+        .button_project:hover{
+            background-color: #0b172d;
+            color: #38BDF8;
+            border: 1px solid #38BDF8;
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+        }
+        .button_project_progress{
+            background-color: #0b172d;
+            color: #28f48a;
+            border: 1px solid #28f48a;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 15px;
+            font-size: 15px;
+            font-weight:bold 
+        }
+        .button_project_progress:hover{
+            background-color: #0b172d;
+            color: #28f48a;
+            border: 1px solid #28f48a;
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+        }
+        .button_project_personal{
+            background-color: #0b172d;
+            color: #9552f3;
+            border: 1px solid #9552f3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 15px;
+            font-size: 15px;
+            font-weight:bold 
+        }
+         .button_project_personal:hover{
+            background-color: #0b172d;
+            color: #9552f3;
+            border: 1px solid #9552f3;
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+        }
+        .animation:hover{
+            transform: translateY(-5px); 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><h6>nyan.</h6></a>
+            <ul class="nav-links">
+                <li><a class="nav_animation" href="#about">About</a></li>
+                <li><a class="nav_animation" href="#projects">Projects</a></li>
+                <li><a class="nav_animation" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h3>👋 Hi, I'm</h3>
+                <h1>Nyan Lin Aung</h1>
+            </div>
+            <div>
+                <img src="DSC_9729-removebg-preview.png" alt="Nyan Lin Aung">
+            </div>
+            <div style="margin-right: 10px;">
+                <h4>I'm a Computer Science <br>student</h4>
+                <div>
+                    <a href="#contact"><button class="CM">Contact Me</button></a>
+                    <a href="CV.pdf" download="NLA_CV.pdf" target="_blank"><button class="CV">Download CV</button></a>
+                </div>
+            </div>  
+        </section>
+        <section>
+            <div>
+                <h3 style="font-size: 15px;" id="about">Get to know me</h3>
+                <h2>About me</h2> <br>
+                <p>
+                 I am currently studying Computer Science at SIM Global Education.<br>
+                 I am passionate about learning how systems work by building my own hands-on projects or <br>studying open-source code from other developers' work.
+                </p> <br>
+                <p>
+                Right now, I am expanding my practical skills across Python, web development, JavaScript, and SQL. <br> My goal is to keep deepening my technical foundation, turn ideas into practical applications.
+                </p>
+                <a href="#projects"><button style="margin-top: 25px;" class="CM">Look at My Work</button></a>
+                <h2 style="margin-top: 25px;">My journey</h2> <br>
+                <div class="journey">
+                    <div>
+                    <div class="year">
+                        <h5 style="color: black; align-items: center;">2025</h5>
+                    </div>
+                    <div class="year" style="margin-top: 40px;">
+                        <h5 style="color: black;">2026</h5>
+                    </div>
+                    <div class="year" style="margin-top: 65px;">
+                        <h5 style="color: black; align-items: center;">2027</h5>
+                    </div>
+                    </div>
+                    <div class="timeline">
+                        <h4 style="margin-top: 15px;">IGCSE</h4>
+                        <p>Completed with A*s for my IGCSE studies</p>
+                        <h4 style="padding-top: 20px;">Foundation in IT</h4>
+                        <p>
+                            Started studying ITFS at SIM,
+                            learning programming, web development,
+                            and information systems.
+                        </p>
+                        <h4 style="padding-top: 20px;">Diploma</h4>
+                        <p>Currently started my journey of Diploma in Information Technology at SIM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" style="margin-top: 150px; margin-left: 20px;">
+            <div>
+                <h2>My Projects</h2>
+                <div class="box" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 30px;">
+                     <div style="flex: 1;">
+                         <h5 style="text-align: left; margin-bottom: 10px;">
+                            Singapore Scam Awareness Website
+                        </h5>
+                        <p>
+                            A multi-page scam-awareness <br> website using HTML, CSS, <br> and JavaScript, <br>
+                            providing information, <br>prevention tips, and enquiry.
+                        </p>
+                        <a href="group5_sim_wpf_ca2/final.html" target="_blank"><button class="button_project" >Click Here to View</button></a>
+                    </div>
+                </div>
+                 <div class="box" >
+                    <h5 style="text-align: left; padding-top: 20px; padding-bottom: 10px; padding-left: 10px; margin-left: 20px;">Calculator</h5>
+                    <p style="margin-left: 30px;">
+                        A functional calculator <br> built using HTML, CSS, <br>
+                        and JavaScript, <br>
+                        supporting arithmetic <br>
+                        operations and interactive buttons.
+                    </p>
+                    <button class="button_project_progress" style="margin-left: 30px;" >🚧 Still in Progress</button>
+                </div>
+            </div>
+            <div style="margin-right: 1000px; margin-top: 55px;">
+                <div class="box" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 30px;">
+                     <div style="flex: 1; margin-top: 5px;">
+                         <h5 style="text-align: left; margin-bottom: 10px;">
+                            Discord Bot
+                        </h5>
+                        <p style="margin-bottom: 30px;">
+                           A Discord bot built <br> using Python, designed to <br>
+                           provide interactive <br>commands and server utilities.
+                        </p>
+                        <a href="group5_sim_wpf_ca2/final.html" target="_blank"><button class="button_project" style="margin-top: 10px;" >Click Here to View</button></a>
+                    </div>
+                </div>
+                 <div class="box">
+                    <h5 style="text-align: left; padding-top: 20px; padding-bottom: 10px; padding-left: 10px; margin-left: 20px;">Personal Learning</h5>
+                    <p style="margin-left: 30px;">
+                       Developing skills in Python,<br> JavaScript, SQL, Git, <br>
+                       and web development, <br>building small applications,<br> and exploring <br>open-source projects.
+                    </p>
+                    <button class="button_project_personal" style="margin-left: 30px; margin-top: 5px;" >Currently Learning</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="contact">
+                <div>
+                    <h3 style="font-size: 15px;" id="about">Let's connect!</h3>
+                    <h2>Contacts</h2>
+                    <p>
+                    Have a question, opportunity, or want to connect? <br>
+                    Feel free to reach out!
+                    </p>
+                    <div class="sm_box" style="margin-top: 60px;">
+                        <a class="animation" href="https://github.com/nyanlinnaung09" target="_blank"><img src="github_logo.png" alt="" width="100px" style="margin-bottom: 5px; "></a>
+                        <a class="animation" href="https://www.linkedin.com/in/nyan-lin-aung-35404a38a" target="_blank"><img src="linkedin_logo.png" alt="" width="150px"></a>
+                        <a class="animation" href="https://wa.me/6589576317" target="_blank"><img src="whats_app_logo.png" alt="" width="85px"></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="mailto:aungnyanlinn681@gmail.com">
+                <div class="contact_box" style="margin-top: 200px;">
+                    <div>
+                        <img src="email_logo.png" alt="email logo" width="125px" style="margin-bottom: 15px;">
+                    </div>
+                    <div class="timeline">
+                        <p><strong>Email</strong><br>
+                        <em>aungnyanlinn681@gmail.com</em></p>
+                    </div>
+                </div>
+                </a>
+            </div>
+           
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
